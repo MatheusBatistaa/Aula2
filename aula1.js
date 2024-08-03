@@ -7,3 +7,4 @@ cor = prompt("Digite uma cor de fundo em inglês");
 
 // A cor doigitda pelo o usuario, ficou na variável cor e será usada para alterar a cor de fundo do body do nosso documento.
 document.body.style.backgroundColor = cor;
+
