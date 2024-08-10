@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de produtos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Produtos</h1>
+    <form onsubmit="return false">
+        Nome do produto: <input type="text" id="nome_produto"></input>
+        
+        Preço do produto: <input type="text" id="preco">
+        
+       Forma depagamento:  
+       <select name="" id="forma_pagamento">
+
+            <option value = "selecione"> Selecione</option>
+            <option value ="pix">Pix </option>
+            <option value ="dinheiro"> Dinheiro</option>
+            <option value ="cartao"> Cartão</option>
+
+       </select>
+
+       <button onclick="calcular()">CALCULAR</button>
+
+       Valor a pagar: <input type="text" id="valor_pagar">
+      
+    </form>
+    
+</body>
+
+<script src="js/calculo.js"></script>
+
+</html>
