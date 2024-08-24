@@ -1,0 +1,35 @@
+#fotos {
+    width: 80%;
+    padding: 10px;
+    margin: 30px auto;
+}
+
+#fotos img {
+    width: 30%;
+    margin: 5px;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+#fotos img:hover {
+    transform: scale(1.2);
+}
+
+#paleta {
+    width: 100vw;
+    height: 35vh;
+    border-bottom: 1px solid silver;
+}
+
+#conteudo {
+    width: 100vw;
+    height: 70vh;
+}
+
+
+
+td {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
