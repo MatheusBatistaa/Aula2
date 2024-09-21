@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    background-color:aqua;
+     
+
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+form {
+    
+    width: 40vw;
+    margin: 0px auto;
+    padding: 10px;
+    border: 2px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 0pz 10px silver;
+}
+
+input {
+
+    width: 90%;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.cadastrar {
+
+
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 40%;
+    
+
+}

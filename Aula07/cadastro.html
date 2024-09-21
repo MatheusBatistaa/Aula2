@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <h1>Cadastro cliente</h1>
+
+    <form onsubmit=" return false">
+        <label> Nome completo: </label>
+        <input type="nome" id="txtnome" required>
+
+        <label> E-mail: </label>
+        <input type="email" id="txtemail" required>
+
+        <label> Telefone: </label>
+        <input type="tel" id="txttelefone" required>
+
+        <label> Idade: </label>
+        <input type="number" id="txtidade" required value="16" min="16">
+
+        <button onclick ="cadastro()" class="cadastrar">Cadastrar</button>
+
+
+    </form>
+
+    <h2>Lista de lientes</h2>
+
+    <div id="lista">
+
+        
+
+    </div>
+ 
+
+    
+</body>
+
+<script src="./scripts/cadastro.js"></script>
+
+</html>
