@@ -16,7 +16,7 @@ let cadastro = () => {
         idade:idade.value
     }
 
-    dados.push(cliente)
+    dados.push(cliente) //coloca na lista de dados
     listarClientes();
 
     console.log(dados);
@@ -29,11 +29,11 @@ let listarClientes = () => {
   let lista = document.getElementById("lista");
   lista.innerHTML = `
     
-    <p> 
-        <span>Nome</span>
-        <span>E-mail</span>
-        <span>Telefone</span>
-        <span>Idade</span>
+    <p class=cabecalho> 
+        <span>Nome:</span>
+        <span>E-mail:</span>
+        <span>Telefone:</span>
+        <span>Idade:</span>
     </p>
   
   ` 
@@ -46,7 +46,7 @@ let listarClientes = () => {
 
         mostra += `
     
-        <p> 
+        <p class=info> 
             <span>${cli.nome}</span>
             <span>${cli.email}</span>
             <span>${cli.telefone}T</span>
