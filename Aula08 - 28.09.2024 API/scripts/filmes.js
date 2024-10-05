@@ -1,11 +1,31 @@
+function infoFilme (dados){
+
+    let saida = ""
+    saida+=`<h2> ${dados.title}</h2>`
+    saida+=`<p> ${dados.overview}</p>`
+    saida+= `<p> Lançamento: ${dados.release_date}</p>`
+    saida+= `<p>Média votos: ${dados.vote_average}</p>`
+
+
+
+    document.getElementById("info").style.display = "flex"
+    document.getElementById("poster").innerHTML =`<img src= https://image.tmdb.org/t/p/w500${dados.poster_path}>`
+    document.getElementById("info").style.zIndex ="1000"// quando clica ele nao mostra mais a div da tela anteior   
+    document.getElementById("detalhes").innerHTML = saida
+}
+
+
 
 function carregarFilmes () {
 
     // referencia para lista
     let lista = document.getElementById("lista")
 
+    //busca de dados 
     fetch("https://api.themoviedb.org/3/movie/popular?language=pt-br&api_key=e8ee1b7136ab091a2fb872089bf3c840&page=1")
+    //transforma a resposta do servidor
     .then((resposta) => resposta.json()) // resposta, pega e transforma em json para ficar organizados
+    //Pega o que foi convertido e joga em dados
     .then((dados)=> {
          console.log(dados.results)
 
@@ -13,9 +33,16 @@ function carregarFilmes () {
 
          dados.results.map ((f, i) => {
 
-            // Vamos criar um elemento do tipo div para cada filme mapeado 
+            // Vamos criar um elemento do tipo div para cada filme mapeado, para ficar dentro de continer   
 
             let div_fm = document.createElement("div")
+
+            //Criando o evento click para quando for clicar no filme
+            div_fm.onclick = ()=>{
+                infoFilme(f);
+            }
+
+
             //add um atributo do tipo class para formatar 
             div_fm.setAttribute("class", "filme")
             
@@ -38,7 +65,7 @@ function carregarFilmes () {
             // Criar o elemento do tipo p para a media de votos 
             let p_votos = document.createElement("p")
             p_votos.setAttribute("class", "votos")
-            p_votos.innerHTML=f.vote_average
+            p_votos.innerHTML= Math.round (f.vote_average*10)  + "%"
  
 
             //Add a imagem na div usando o comando appendchild
@@ -60,4 +87,12 @@ function carregarFilmes () {
 }
 
 // agora vamos imprimir na tela com o map
+
+// Quando clicar no X fechar dados 
+// da tela de informções do filme 
+// o painel com as informações deve fechar. Vamos usar o comando de css display none
+
+document.getElementById("fechar").onclick=()=> {
+    document.getElementById("info").style.display = "none"
+}
 

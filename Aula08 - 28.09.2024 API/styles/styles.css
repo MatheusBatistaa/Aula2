@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "Kanit"; /*Apelido*/
+    src: url("./fonts/Kanit-Bold.ttf");
+    src: url("./fonts/Caveat/Caveat-VariableFont_wght.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(135, 167, 194);
+}
+
+
+
+div#lista {
+
+    display: flex;
+    width: 70%;
+    margin-right: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 1px black solid;
+}
+
+.filme{
+
+    width: 18.01%;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px silver solid;
+    box-shadow: 0 0 10px #eee;
+    transition: ease 0.5s;
+    cursor: pointer;
+    background-color: #f8eeee;
+}
+
+.filme img {
+
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.filme:hover {
+
+    transform: scale(1.2);
+    z-index: 1000; /*Faz o emplilhamento das cores para destacar em primeiro*/
+}
+
+/*Voto*/
+
+.votos {
+    background-color:rgb(3, 39, 3) ;
+    border: 1px solid limegreen;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    /*Arredondando*/
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    /*centraliza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8pt;
+    /*Posição*/
+    position: relative;
+    left: 10px;
+    top: -25px;
+}
+
+h2 {
+    font-family: "Kanit";
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.lancamento {
+
+    font-family: "kanit";
+    font-size: 19pt;
+}
+
+
+/*Aparte de informação ao clicar*/
+/*Criamos primeiro o css, depois fomos para o JS*/
+
+#info{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#info-filme {
+
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    display: flex;
+}
+
+#fechar{
+
+    text-decoration: none;
+    color: black;
+    font-size: 20pt;
+    font-weight: bold;
+    position: relative;
+    left: 770px;
+    top: 1px;
+    width: 0px;
+    height: 0px;
+
+    
+}
+
+#poster, #detalhes {
+
+    flex: 1; /*Ocupa uma fração dentro da area para cada um*/
+
+
+}
+
+#poster img {
+
+    width: 100%;
+    height: 600px;
+
+
+}
+
+#detalhes {
+
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px ;
+}
+
+/*Estilo do detalhes quando clicado*/
+
+#detalhes p  {
+
+        font-family:'Times New Roman', Times, serif;
+        padding: 5px;   
+         
+}
