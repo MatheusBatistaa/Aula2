@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/boostrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <title>Cadastro de clientes (gerenciamento) com node/mysql/javascript</title>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1> Gerenciar clientes</h1>
+
+        <hr>
+
+        <a href="#" class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal"   > Cadastrar clientes</a>
+
+        <hr>
+        
+        <h4>Clientes cadastrado:</h2>
+
+            <div id="lista">
+                
+            </div>
+
+
+    </div>
+
+
+
+    <!-- Inicio do modal-->
+    <div class="modal fade modal-dialog modal-dialog-centered" tabindex="-1" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cadastrar Clientes</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <form onsubmit="return false;">
+                    <input class="col-12" type="text" id="txtnome" placeholder="Nome completo">
+                    <input class="col-12" type="email" id="txtemail" placeholder="Email">
+                    <input class="col-12" type="andress" id="txtendereco" placeholder="Endereço">
+                    <input class="col-5" type="tel" id="txttelefone" placeholder="Telefone">
+                    <input class="col-5" type="number" id="txtidade" placeholder="Idade 18+">
+                </form>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" id="salvar">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Final do modal-->
+
+
+    <script src="./scripts/popper.min.js"></script>
+    <script src="./styles/boostrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+
+<script src="./scripts/gerenciar.js"></script>
+
+
+</html>
