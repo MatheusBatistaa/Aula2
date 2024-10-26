@@ -4,3 +4,21 @@
     margin: 0 auto !important;
 
 }
+
+/*Pade de fundo*/
+body{
+
+    background-image: url(../fotod/parede2.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.card{
+    margin-top: 2px;
+    cursor:no-drop;
+}
+
+h1, h4 {
+
+    color: rgb(250, 248, 252);
+}
