@@ -15,8 +15,6 @@ const btncadastrar = document.getElementById("btncadastrar")
 // Quando clicar no botão cadastrar cliente 
 //o Botão atualizar do modal deve desaparecer
 //Vamos aplicar um estilo css de display none
-
-
 btncadastrar.onclick =()=> {
     btnatualizar.style.display="none"
     btnsalvar.style.display="block"
